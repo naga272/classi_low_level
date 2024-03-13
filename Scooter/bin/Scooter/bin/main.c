@@ -14,7 +14,7 @@ int main(int argc, char *argv[], char *envp[]){
 
 	printf("capacità: %.2f\n", p1->capacita);
 
-	p1 -> __del__();		// libero la memoria allocata dinamicamente
+	p1 -> __del__(p1);		// libero la memoria allocata dinamicamente
 	return EXIT_SUCCESS;
 }
 

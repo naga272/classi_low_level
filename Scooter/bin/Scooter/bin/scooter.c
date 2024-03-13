@@ -74,17 +74,10 @@ struct scooter* Scooter(const float capacita, float quantita, float resa, float 
 	__init__ -> contachilometri 	= (contachilometri >= 0.0)			? contachilometri 	: (const float) 0.0;
 
 	// assegnazione costrutti ai puntatori
-	*__init__ = (struct scooter){.rifornimento = __rifornimento};
-	*__init__ = (struct scooter){.avanza = __avanza};
-	*__init__ = (struct scooter){.reset = __reset};
-
-	*__init__ = (struct scooter){.__str__ = __str};
-	*__init__ = (struct scooter){.__del__ = __del};
-
-	//__init__ -> avanza		= __avanza;
-	//__init__ -> reset		= __reset;
-	//__init__ -> __str__		= __str;
-	//__init__ -> __del__		= __del;
+	__init__ -> avanza		= __avanza;
+	__init__ -> reset		= __reset;
+	__init__ -> __str__		= __str;
+	__init__ -> __del__		= __del;
 
 	/*	algoritmo per assegnare al vettore all le struct 	*/
 	unsigned short int i = 0;
